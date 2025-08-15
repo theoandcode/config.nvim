@@ -98,4 +98,9 @@ return {
       signature = { enabled = true },
     },
   },
+  {
+    'nvim-treesitter/nvim-treesitter-context',
+    main = 'treesitter-context',
+    event = 'BufEnter',
+  },
 }
