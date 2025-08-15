@@ -30,7 +30,7 @@ return {
       keys = {
         { '<leader>cc', ':CopilotChat<cr>', desc = 'Open [C]opilot [C]chat', silent = true },
       },
-      opts = {},
+      opts = { auto_insert_mode = true },
     },
   },
 }
