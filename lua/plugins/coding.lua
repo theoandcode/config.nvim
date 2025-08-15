@@ -1,5 +1,15 @@
 return {
   'NMAC427/guess-indent.nvim',
+  { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
+  {
+    'windwp/nvim-ts-autotag',
+    opts = {
+      -- Optional: enable auto-rename of tags
+      enable_rename = true,
+      -- Optional: disable auto-close on trailing /
+      enable_close_on_slash = false,
+    },
+  },
   {
     {
       'lukas-reineke/indent-blankline.nvim',

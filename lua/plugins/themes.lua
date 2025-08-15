@@ -10,11 +10,6 @@ return {
   },
   {
     'catppuccin/nvim',
-    priority = 1000,
-    enabled = false,
-    config = function()
-      require('catppuccin').setup()
-      vim.cmd.colorscheme 'catppuccin'
-    end,
+    optional = true,
   },
 }
