@@ -30,5 +30,7 @@ return {
       'nvim-lua/plenary.nvim',
       'nvim-neo-tree/neo-tree.nvim',
     },
+    main = 'lsp-file-operations',
+    config = true,
   },
 }
