@@ -23,7 +23,7 @@ return {
     cmd = { 'ConformInfo' },
     keys = {
       {
-        '<leader>f', -- FIXME: conflict keymap
+        '<leader><A-f>',
         function()
           require('conform').format { async = true, lsp_format = 'fallback' }
         end,
