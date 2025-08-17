@@ -2,6 +2,8 @@ return {
   {
     'echasnovski/mini.nvim',
     config = function()
+      require('mini.ai').setup { n_lines = 500 }
+
       local statusline = require 'mini.statusline'
       statusline.setup()
 
