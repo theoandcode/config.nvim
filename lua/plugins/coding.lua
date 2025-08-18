@@ -106,4 +106,11 @@ return {
       'nvim-treesitter/nvim-treesitter',
     },
   },
+  {
+    'norcalli/nvim-colorizer.lua',
+    event = 'BufEnter',
+    config = function()
+      require('colorizer').setup()
+    end,
+  },
 }
