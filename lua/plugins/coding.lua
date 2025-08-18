@@ -14,7 +14,7 @@ return {
     {
       'lukas-reineke/indent-blankline.nvim',
       main = 'ibl',
-      opts = {},
+      config = true,
     },
   },
   { -- Autoformat
@@ -71,7 +71,7 @@ return {
           end
           return 'make install_jsregexp'
         end)(),
-        opts = {},
+        config = true,
       },
       'folke/lazydev.nvim',
     },
