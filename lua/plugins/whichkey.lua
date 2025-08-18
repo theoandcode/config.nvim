@@ -12,7 +12,7 @@ return { -- Useful plugin to show you pending keybinds.
       { '<leader>f', group = '[F]ind' },
       { '<leader>t', group = '[T]oggle' },
       { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
-      { '<leader>c', group = '[C]opilot' },
+      { '<leader>c', group = '[C]opilot', mode = { 'n', 'v' } },
       { '<leader>ct', desc = '[T]oggle On/Off' },
     },
   },

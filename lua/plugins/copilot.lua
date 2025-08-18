@@ -28,7 +28,7 @@ return {
       },
       build = 'make tiktoken',
       keys = {
-        { '<leader>cc', ':CopilotChat<cr>', desc = 'Open [C]opilot [C]chat', silent = true },
+        { '<leader>cc', ':CopilotChat<cr>', desc = 'Open [C]opilot [C]chat', silent = true, mode = { 'n', 'v' } },
       },
       opts = { auto_insert_mode = true },
     },
