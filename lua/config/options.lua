@@ -68,7 +68,7 @@ vim.api.nvim_create_autocmd('FileType', {
       vim.o.foldmethod = 'expr'
       vim.o.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
     else
-      vim.o.foldmethod = 'syntax'
+      vim.o.foldmethod = 'manual'
     end
   end,
 })
