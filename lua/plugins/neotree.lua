@@ -11,6 +11,8 @@ return {
     keys = {
       { '\\', ':Neotree focus<CR>', desc = 'NeoTree focus', silent = true },
     },
+    ---@module 'neo-tree'
+    ---@type neotree.Config
     opts = {
       filesystem = {
         bind_to_cwd = false,
