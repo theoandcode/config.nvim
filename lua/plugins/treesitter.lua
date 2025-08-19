@@ -35,4 +35,9 @@ return {
     },
   },
   'nvim-treesitter/nvim-treesitter-textobjects', -- Allow jumping between textobjects
+  {
+    'nvim-treesitter/nvim-treesitter-context',
+    main = 'treesitter-context',
+    event = 'BufReadPre',
+  },
 }

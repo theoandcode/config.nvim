@@ -99,16 +99,8 @@ return {
     },
   },
   {
-    'nvim-treesitter/nvim-treesitter-context',
-    main = 'treesitter-context',
-    event = 'BufEnter',
-    dependencies = {
-      'nvim-treesitter/nvim-treesitter',
-    },
-  },
-  {
     'norcalli/nvim-colorizer.lua',
-    event = 'BufEnter',
+    event = 'BufReadPre',
     config = function()
       require('colorizer').setup()
     end,
