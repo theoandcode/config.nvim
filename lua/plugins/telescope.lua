@@ -65,6 +65,14 @@ return {
       vim.keymap.set('n', '<leader>fn', function()
         builtin.find_files { cwd = vim.fn.stdpath 'config' }
       end, { desc = '[F]ind [N]eovim files' })
+
+      vim.keymap.set('n', '<leader>fp', function()
+        builtin.live_grep {
+          prompt_title = "Live Grep plugins' files",
+          cwd = vim.fn.stdpath 'data' .. '/lazy',
+          glob_pattern = '*.lua',
+        }
+      end, { desc = "Grep plugins' files" })
     end,
   },
 }
