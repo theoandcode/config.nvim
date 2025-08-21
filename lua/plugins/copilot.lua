@@ -6,10 +6,15 @@ return {
       {
         '<leader>ct',
         function()
+          if not package.loaded.copilot then
+            vim.cmd 'Copilot'
+          end
           vim.g.copilot_enabled = not vim.g.copilot_enabled
           if vim.g.copilot_enabled then
+            vim.cmd 'Copilot enable'
             print 'Copilot enabled'
           else
+            vim.cmd 'Copilot disable'
             print 'Copilot disabled'
           end
         end,
