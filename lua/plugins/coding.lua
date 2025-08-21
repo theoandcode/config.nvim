@@ -4,9 +4,7 @@ return {
   {
     'windwp/nvim-ts-autotag',
     opts = {
-      -- Optional: enable auto-rename of tags
       enable_rename = true,
-      -- Optional: disable auto-close on trailing /
       enable_close_on_slash = false,
     },
   },
@@ -31,6 +29,8 @@ return {
         desc = '[F]ormat buffer',
       },
     },
+    --- @module 'conform'
+    --- @type conform.setupOpts
     opts = {
       notify_on_error = false,
       format_on_save = function(bufnr)
@@ -49,6 +49,7 @@ return {
       end,
       formatters_by_ft = {
         lua = { 'stylua' },
+        json = { 'prettierd', 'prettier' },
         -- javascript = { "prettierd", "prettier", stop_after_first = true },
       },
     },
