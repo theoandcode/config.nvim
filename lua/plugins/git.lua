@@ -13,7 +13,7 @@ return {
         end
 
         -- Navigation
-        map('n', ']gc', function()
+        map('n', ']c', function()
           if vim.wo.diff then
             vim.cmd.normal { ']c', bang = true }
           else
@@ -21,7 +21,7 @@ return {
           end
         end, { desc = 'Jump to next git [c]hange' })
 
-        map('n', '[gc', function()
+        map('n', '[c', function()
           if vim.wo.diff then
             vim.cmd.normal { '[c', bang = true }
           else
