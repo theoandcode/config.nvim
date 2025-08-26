@@ -1,6 +1,7 @@
 return {
   {
     'github/copilot.vim',
+    event = 'VeryLazy',
     -- Lazy loading copilot only when <leader>ct is pressed
     keys = {
       {
