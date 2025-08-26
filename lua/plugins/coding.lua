@@ -3,6 +3,7 @@ return {
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
   {
     'windwp/nvim-ts-autotag',
+    event = 'BufReadPre',
     opts = {
       enable_rename = true,
       enable_close_on_slash = false,
