@@ -63,7 +63,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
-vim.o.foldenable = false
+vim.o.foldlevelstart = 99
 vim.api.nvim_create_autocmd('FileType', {
   callback = function()
     if require('nvim-treesitter.parsers').has_parser() then
