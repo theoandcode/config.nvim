@@ -1,5 +1,42 @@
+---@diagnostic disable: missing-fields
 return {
   {
+    'zbirenbaum/copilot.lua',
+    event = 'BufReadPost',
+    cmd = 'Copilot',
+    build = ':Copilot auth',
+    init = function()
+      vim.g.copilot_enabled = false
+    end,
+    keys = {
+      {
+        '<leader>ct',
+        function()
+          vim.g.copilot_enabled = not vim.g.copilot_enabled
+          vim.cmd 'Copilot suggestion toggle_auto_trigger'
+          if vim.g.copilot_enabled then
+            vim.notify 'Copilot Enabled'
+          else
+            vim.notify 'Copilot Disabled'
+          end
+        end,
+        desc = '[T]oggle Copilot',
+      },
+    },
+    ---@module 'copilot'
+    ---@type CopilotConfig
+    opts = {
+      suggestion = {
+        enabled = true,
+        auto_trigger = vim.g.copilot_enabled or false,
+        keymap = {
+          accept = '<tab>',
+        },
+      },
+    },
+  },
+  {
+    enabled = false,
     'github/copilot.vim',
     event = 'VeryLazy',
     -- Lazy loading copilot only when <leader>ct is pressed
