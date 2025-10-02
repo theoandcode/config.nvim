@@ -2,21 +2,18 @@
 return {
   {
     'zbirenbaum/copilot.lua',
-    event = 'BufReadPost',
+    event = 'VeryLazy',
     cmd = 'Copilot',
     build = ':Copilot auth',
-    init = function()
-      vim.g.copilot_enabled = false
-    end,
     keys = {
       {
         '<leader>ct',
         function()
-          vim.g.copilot_enabled = not vim.g.copilot_enabled
-          vim.cmd 'Copilot suggestion toggle_auto_trigger'
-          if vim.g.copilot_enabled then
+          if require('copilot.client').is_disabled() then
+            vim.cmd 'Copilot enable'
             vim.notify 'Copilot Enabled'
           else
+            vim.cmd 'Copilot disable'
             vim.notify 'Copilot Disabled'
           end
         end,
@@ -28,12 +25,18 @@ return {
     opts = {
       suggestion = {
         enabled = true,
-        auto_trigger = vim.g.copilot_enabled or false,
+        auto_trigger = true,
+        hide_during_completion = false,
         keymap = {
           accept = '<tab>',
         },
       },
     },
+    config = function(_, opts)
+      require('copilot').setup(opts)
+      -- Disable copilot by default
+      vim.cmd 'Copilot disable'
+    end,
   },
   {
     enabled = false,

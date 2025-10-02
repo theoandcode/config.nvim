@@ -8,8 +8,8 @@ vim.keymap.set('n', '<A-j>', ':m .+1<CR>==', { silent = true, desc = 'Move code 
 vim.keymap.set('n', '<A-k>', ':m .-2<CR>==', { silent = true, desc = 'Move code up' })
 
 -- Clear highlights on search when pressing <Esc> in normal mode
---  See `:help hlsearch`
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
+-- Diagnostic location list
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
-
+-- Escape terminal mode
 vim.keymap.set('t', '<esc><esc>', '<c-\\><c-n>')
