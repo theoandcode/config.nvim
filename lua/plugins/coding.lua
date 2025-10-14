@@ -24,7 +24,7 @@ return {
       {
         '<leader><A-f>',
         function()
-          require('conform').format { async = true, lsp_format = 'fallback' }
+          require('conform').format { async = true, lsp_format = 'prefer' }
         end,
         mode = '',
         desc = '[F]ormat buffer',
@@ -44,14 +44,17 @@ return {
         else
           return {
             timeout_ms = 500,
-            lsp_format = 'fallback',
+            lsp_format = 'prefer',
           }
         end
       end,
       formatters_by_ft = {
         lua = { 'stylua' },
         json = { 'prettierd', 'prettier', stop_after_first = true },
-        -- javascript = { "prettierd", "prettier", stop_after_first = true },
+        javascript = { 'prettierd', 'prettier', stop_after_first = true },
+        typescript = { 'prettierd', 'prettier', stop_after_first = true },
+        typescriptreact = { 'prettierd', 'prettier', stop_after_first = true },
+        javascriptreact = { 'prettierd', 'prettier', stop_after_first = true },
       },
     },
   },
