@@ -24,7 +24,7 @@ return {
       {
         '<leader><A-f>',
         function()
-          require('conform').format { async = true, lsp_format = 'prefer' }
+          require('conform').format { async = true, lsp_format = 'first' }
         end,
         mode = '',
         desc = '[F]ormat buffer',
@@ -44,7 +44,7 @@ return {
         else
           return {
             timeout_ms = 500,
-            lsp_format = 'prefer',
+            lsp_format = 'first',
           }
         end
       end,
