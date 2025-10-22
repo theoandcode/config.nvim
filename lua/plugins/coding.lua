@@ -40,7 +40,10 @@ return {
         -- languages here or re-enable it for the disabled ones.
         local disable_filetypes = { c = true, cpp = true }
         if disable_filetypes[vim.bo[bufnr].filetype] then
-          return nil
+          return {
+            timeout_ms = 500,
+            lsp_format = 'never',
+          }
         else
           return {
             timeout_ms = 500,
@@ -55,6 +58,8 @@ return {
         typescript = { 'prettierd', 'prettier', stop_after_first = true },
         typescriptreact = { 'prettierd', 'prettier', stop_after_first = true },
         javascriptreact = { 'prettierd', 'prettier', stop_after_first = true },
+        cpp = { 'clang_format' },
+        c = { 'clang_format' },
       },
     },
   },
