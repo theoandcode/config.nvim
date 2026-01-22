@@ -99,6 +99,8 @@ return {
       vim.lsp.config('*', {
         capabilities = capabilities,
       })
+
+      vim.lsp.enable 'cmake-language-server'
     end,
   },
 }
