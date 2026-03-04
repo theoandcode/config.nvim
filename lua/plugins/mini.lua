@@ -15,6 +15,7 @@ return {
 
       require('mini.tabline').setup()
       require('mini.pairs').setup()
+      require('mini.surround').setup()
     end,
   },
 }

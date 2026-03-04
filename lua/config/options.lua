@@ -96,3 +96,6 @@ vim.diagnostic.config {
     severity = vim.diagnostic.severity.ERROR,
   },
 }
+
+vim.o.exrc = true
+vim.o.secure = true
