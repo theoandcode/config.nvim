@@ -62,6 +62,7 @@ return {
         javascriptreact = { 'prettierd', 'prettier', stop_after_first = true },
         cpp = { 'clang_format' },
         c = { 'clang_format' },
+        markdown = { 'prettierd', 'prettier', stop_after_first = true },
       },
     },
   },

@@ -66,16 +66,6 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 })
 
 vim.o.foldlevelstart = 99
-vim.api.nvim_create_autocmd('FileType', {
-  callback = function()
-    if require('nvim-treesitter.parsers').has_parser() then
-      vim.o.foldmethod = 'expr'
-      vim.o.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
-    else
-      vim.o.foldmethod = 'manual'
-    end
-  end,
-})
 
 vim.diagnostic.config {
   severity_sort = true,
