@@ -2,6 +2,7 @@
 return {
   {
     'zbirenbaum/copilot.lua',
+    enabled = false,
     event = 'VeryLazy',
     cmd = 'Copilot',
     build = ':Copilot auth',
@@ -134,6 +135,23 @@ return {
       'nvim-telescope/telescope.nvim',
       -- 'ibhagwan/fzf-lua',
       -- 'nvim_mini/mini.nvim',
+    },
+  },
+  {
+    'monkoose/neocodeium',
+    build = ':Codeium auth',
+    event = 'VeryLazy',
+    config = true,
+    keys = {
+      {
+        '<tab>',
+        function()
+          local neocodeium = require 'neocodeium'
+          neocodeium.accept()
+        end,
+        mode = { 'i' },
+        desc = '[A]ccept',
+      },
     },
   },
 }
